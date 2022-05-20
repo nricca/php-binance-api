@@ -1256,7 +1256,7 @@ class API
      * @return array containing the response
      * @throws \Exception
      */
-    protected function httpRequest(string $url, string $method = "GET", array $params = [], bool $signed = false)
+    public function httpRequest(string $url, string $method = "GET", array $params = [], bool $signed = false)
     {
         if (function_exists('curl_init') === false) {
             throw new \Exception("Sorry cURL is not installed!");
